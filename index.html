@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>AppGPT</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      
+      h1 {
+        color: #333;
+      }
+      
+      .container {
+        margin-top: 100px;
+      }
+      
+      input[type="text"] {
+        width: 400px;
+        height: 200px;
+        padding: 10px;
+      }
+      
+      button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+      
+      textarea {
+        width: 400px;
+        height: 100px;
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>AppGPT v1.0</h1>
+      <input type="text" id="input-text" placeholder="Enter your essay">
+      <button id="send-button">Send</button>
+      <textarea id="console-output" readonly></textarea>
+    </div>
+    <script>
+      const sendButton = document.getElementById('send-button');
+      const inputText = document.getElementById('input-text');
+      const consoleOutput = document.getElementById('console-output');
+      
+      sendButton.addEventListener('click', () => {
+        // Get the input text value
+        const essay = inputText.value;
+        
+        // Do something with the essay (e.g., send it to a server, write to a file)
+        // Here, we're simulating a successful write operation
+        const result = 'The result was written successfully';
+        
+        // Update the console output with the result
+        consoleOutput.value = result;
+      });
+    </script>
+  </body>
+</html>
